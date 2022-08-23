@@ -1,0 +1,19 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+
+.navbar {
+  @include mix.flexNavbar($direction:column);
+  @include mix.tablet {
+    @include mix.flexNavbar;
+  }
+  ul {
+    @include mix.tablet {
+    }
+    @include mix.flexNavbar($direction:row);
+    li {
+      font-size: var.$md;
+      font-weight: 700;
+      text-transform: uppercase;
+     }
+  }
+}

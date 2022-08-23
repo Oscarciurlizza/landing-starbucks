@@ -1,0 +1,15 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+
+.button {
+  .btn-card {
+    margin-top: 4rem;
+    @include mix.button(transparent ,var.$green, var.$green);
+  }
+  .sign-in {
+    @include mix.button(transparent ,var.$green, var.$green);
+  }
+  .join-now {
+    @include mix.button(var.$black ,var.$white);
+  }
+}

@@ -1,0 +1,43 @@
+@use 'variables' as var;
+
+@mixin flexNavbar($justify: space-between ,$gap: 2rem, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin flexY($height: 100vh, $justify, $align, $direction: row) {
+  height: $height;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin button($bg: transparent, $color, $border: transparent) {
+  background-color: $bg;
+  color: $color;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border: 1px solid $border;
+  border-radius: 25rem;
+}
+
+@mixin phone{
+  @media (min-width: var.$phone) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (min-width: var.$tablet) {
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: var.$desktop) {
+    @content
+  }
+}

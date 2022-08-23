@@ -1,0 +1,37 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+
+.card {
+  @include mix.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%
+  }
+  margin-bottom: 3rem;
+  &-left {
+    padding: 4rem;
+    @include mix.flexY(auto, center, center, column);
+  }
+  &-right {
+    height: 100%;
+  }
+  .green {
+    background-color: var.$green;
+  }
+  .pink {
+    background-color: var.$pink;
+  }
+  .salmon {
+    background-color: var.$salmon;
+    color: var.$white;
+  }
+  .orange {
+    background-color: var.$orange;
+  }
+  .ligth-green {
+    background-color: var.$lightGreen;
+  }
+  .order {
+    order: 2;
+  }
+}

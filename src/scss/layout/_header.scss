@@ -1,0 +1,24 @@
+@use '../base/mixins' as mix;
+
+.header {
+  position: relative;
+  padding: 4rem;
+  .flex {
+    @include mix.flexNavbar($justify:center);
+    @include mix.tablet {
+      @include mix.flexNavbar;
+    }
+    .tools {
+      font-weight: 700;
+      display: none;
+      @include mix.tablet {
+        @include mix.flexNavbar($gap:4rem);
+
+      }
+    }
+  }  
+}
+
+
+
+

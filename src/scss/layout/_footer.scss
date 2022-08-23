@@ -1,0 +1,8 @@
+@use '../base/mixins' as mix;
+
+.footer {
+  @include mix.flexY(20vh ,center, center, column);
+  span {
+    font-weight: 700;
+  }
+}
